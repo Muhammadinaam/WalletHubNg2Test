@@ -1,0 +1,23 @@
+<div *ngIf="changesInformation">
+  <table class="table table-sm">
+    <tr>
+      <td>Changed In:</td>
+      <td>{{ changesInformation.changedIn }}</td>
+    </tr>
+
+    <tr *ngIf="changesInformation.previousValue">
+      <td>Previous Value:</td>
+      <td>{{ changesInformation.previousValue }}</td>
+    </tr>
+
+    <tr>
+      <td>Current Value:</td>
+      <td>{{ changesInformation.currentValue }}</td>
+    </tr>
+
+    <tr *ngIf="changesInformation.isChangedForFirstTime">
+      <td>First Time Change:</td>
+      <td>{{ changesInformation.isChangedForFirstTime }}</td>
+    </tr>
+  </table>
+</div>

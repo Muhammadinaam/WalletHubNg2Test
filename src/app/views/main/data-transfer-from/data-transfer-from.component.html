@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="card-header">
+    <h5>
+      Data Transfer Between Pages Demo
+    </h5>
+  </div>
+  <div class="card-body">
+    <div class="form-group">
+      <label for="textInput">Input</label>
+      <input
+        type="text"
+        class="form-control"
+        name=""
+        id="textInput"
+        aria-describedby="helpId"
+        placeholder=""
+        [(ngModel)]="input"
+      />
+      <small id="helpId" class="form-text text-muted">Text of this input will be sent to other page</small>
+    </div>
+    <button class="btn btn-primary" (click)="send()">Send</button>
+  </div>
+</div>
