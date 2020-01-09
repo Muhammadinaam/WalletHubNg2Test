@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
-import { ChangesInformation } from '../../../classes/ChangesInformation';
+import { JsonPipe } from '@angular/common';
 
 @Component({
   selector: 'app-on-changes-demo-child',
@@ -11,8 +11,6 @@ export class OnChangesDemoChildComponent implements OnInit, OnChanges {
   @Input() status: number;
   @Output() statusChanged = new EventEmitter();
 
-  
-  statusChangesInformation: ChangesInformation = new ChangesInformation();
 
   constructor() { }
 
@@ -21,20 +19,12 @@ export class OnChangesDemoChildComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if(changes['status']) {
-      this.statusChangesInformation.changedIn = 'Parent Component';
-      this.statusChangesInformation.previousValue = changes['status'].previousValue;
-      this.statusChangesInformation.currentValue = changes['status'].currentValue;
-      this.statusChangesInformation.isChangedForFirstTime = changes['status'].firstChange;
+      alert('Status change detected in ngOnChanges in [Child Component]. Change Information: ' + JSON.stringify(changes));
     }
   }
 
   statusChangedHandler(event) {
-    this.statusChangesInformation.changedIn = 'Child Component';
-    this.statusChangesInformation.previousValue = null;
-    this.statusChangesInformation.currentValue = event.target.value;
-    this.statusChangesInformation.isChangedForFirstTime = null;
-
-    this.statusChanged.emit(this.statusChangesInformation);
+    this.statusChanged.emit(event.target.value);
   }
 
 }

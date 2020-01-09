@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ChangesInformation } from '../../../classes/ChangesInformation';
 
 @Component({
   selector: 'app-on-changes-demo',
@@ -10,16 +9,14 @@ export class OnChangesDemoComponent implements OnInit {
 
   status: number = 1;
 
-  statusChangesInformation: ChangesInformation = new ChangesInformation();
-
   constructor() { }
 
   ngOnInit() {
   }
 
-  statusChangedInChildEventHandler(event)
+  statusChangedInChildEventHandler(value)
   {
-    this.statusChangesInformation = event;
-    //this.status = event.currentValue;
+    alert('Status change event triggered in [Child Component] and handled in [Parent Component]');
+    this.status = value;
   }
 }

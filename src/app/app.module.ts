@@ -33,7 +33,6 @@ import {
 import { AppRoutingModule } from './app.routing';
 import { OnChangesDemoComponent } from './views/main/on-changes-demo/on-changes-demo.component';
 import { OnChangesDemoChildComponent } from './views/main/on-changes-demo-child/on-changes-demo-child.component';
-import { ChangesInfoViewerComponent } from './views/main/changes-info-viewer/changes-info-viewer.component';
 import { GuardedComponent } from './views/main/guarded/guarded.component';
 import { NoPermissionComponent } from './views/main/no-permission/no-permission.component';
 import { DataTransferFromComponent } from './views/main/data-transfer-from/data-transfer-from.component';
@@ -58,7 +57,6 @@ import { DataTransferToComponent } from './views/main/data-transfer-to/data-tran
     ...APP_CONTAINERS,
     OnChangesDemoComponent,
     OnChangesDemoChildComponent,
-    ChangesInfoViewerComponent,
     GuardedComponent,
     NoPermissionComponent,
     DataTransferFromComponent,
