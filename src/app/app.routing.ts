@@ -9,6 +9,14 @@ import { CanActivateDeactivateGuardedGuard } from './guards/can-activate-deactiv
 import { NoPermissionComponent } from './views/main/no-permission/no-permission.component';
 import { DataTransferFromComponent } from './views/main/data-transfer-from/data-transfer-from.component';
 import { DataTransferToComponent } from './views/main/data-transfer-to/data-transfer-to.component';
+import { NgAnimationComponent } from './views/main/ng-animation/ng-animation.component';
+import { CssAnimationComponent } from './views/main/css-animation/css-animation.component';
+import { NestedRouteDemoComponent } from './views/main/nested-route-demo/nested-route-demo.component';
+import { NestedComponent1Component } from './views/main/nested-component1/nested-component1.component';
+import { NestedComponent2Component } from './views/main/nested-component2/nested-component2.component';
+import { SimpleValidationComponent } from './views/main/simple-validation/simple-validation.component';
+import { NgContentDemoComponent } from './views/main/ng-content-demo/ng-content-demo.component';
+import { NineTenComponent } from './views/main/nine-ten/nine-ten.component';
 
 export const routes: Routes = [
   {
@@ -57,7 +65,7 @@ export const routes: Routes = [
       {
         path: 'data-transfer',
         data: {
-          title: 'Data Transfer'
+          title: 'Data Transfer',
         },
         component: DataTransferFromComponent
       },
@@ -67,6 +75,59 @@ export const routes: Routes = [
           title: 'Data Transfer To'
         },
         component: DataTransferToComponent
+      },
+      {
+        path: 'ng-animation',
+        data: {
+          title: 'Angular Animation Demo',
+          animation: 'ngAnimationPage',
+        },
+        component: NgAnimationComponent
+      },
+      {
+        path: 'css-animation',
+        data: {
+          title: 'CSS Animation Demo',
+        },
+        component: CssAnimationComponent
+      },
+      {
+        path: 'nested-route-demo',
+        data: {
+          title: 'Nested Route Demo',
+        },
+        component: NestedRouteDemoComponent,
+        children: [
+          {
+            path: 'nested-menu-1',
+            component: NestedComponent1Component
+          },
+          {
+            path: 'nested-menu-2',
+            component: NestedComponent2Component
+          },
+        ]
+      },
+      {
+        path: 'simple-validation',
+        data: {
+          title: 'Simple Validation Demo',
+        },
+        component: SimpleValidationComponent
+      },
+      {
+        path: 'ng-content-demo',
+        data: {
+          title: 'Ng-Content Demo',
+        },
+        component: NgContentDemoComponent
+      },
+      {
+        path: 'nine-and-ten',
+        data: {
+          title: 'Directive Demo and Property Binding Demo',
+        },
+        component: NineTenComponent
       },
     ]
   },

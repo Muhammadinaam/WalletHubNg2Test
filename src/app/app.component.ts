@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd, RouterOutlet } from '@angular/router';
+import { trigger, transition, style, query, animateChild, group, animate } from '@angular/animations';
 
 @Component({
   // tslint:disable-next-line
   selector: 'body',
-  template: '<router-outlet></router-outlet>'
+  template: 
+  `<router-outlet></router-outlet>`,
 })
 export class AppComponent implements OnInit {
   title = 'CoreUI 2 for Angular 8';

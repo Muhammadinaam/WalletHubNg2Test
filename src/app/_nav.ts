@@ -46,4 +46,28 @@ export const navItems: INavData[] = [
     url: '/css-animation',
     icon: 'icon-notebook',
   },
+
+  {
+    name: '6. Nested Route',
+    url: '/nested-route-demo',
+    icon: 'icon-notebook',
+  },
+
+  {
+    name: '7. Simple Validation',
+    url: '/simple-validation',
+    icon: 'icon-notebook',
+  },
+
+  {
+    name: '8. Ng-Content Demo',
+    url: '/ng-content-demo',
+    icon: 'icon-notebook',
+  },
+
+  {
+    name: '9 and 10',
+    url: '/nine-and-ten',
+    icon: 'icon-notebook',
+  }
 ];

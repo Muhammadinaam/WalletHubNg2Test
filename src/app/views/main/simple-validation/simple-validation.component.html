@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-header">
+    <h5>Simple Validation Demo</h5>
+  </div>
+
+  <div class="card-body">
+    
+    <div class="alert alert-info">
+        Simple Validation without <b>Angular Forms</b> and <b>ngModal</b>
+    </div>
+    
+    <div class="form-group">
+      <label>Name</label>
+      <input #name type="text" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input #email type="email" class="form-control" required />
+    </div>
+
+    <button class="btn btn-primary" (click)="submit(name.value, email.value)">
+      Submit
+    </button>
+  </div>
+</div>
+

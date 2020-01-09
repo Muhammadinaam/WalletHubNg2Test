@@ -37,6 +37,16 @@ import { GuardedComponent } from './views/main/guarded/guarded.component';
 import { NoPermissionComponent } from './views/main/no-permission/no-permission.component';
 import { DataTransferFromComponent } from './views/main/data-transfer-from/data-transfer-from.component';
 import { DataTransferToComponent } from './views/main/data-transfer-to/data-transfer-to.component';
+import { NgAnimationComponent } from './views/main/ng-animation/ng-animation.component';
+import { CssAnimationComponent } from './views/main/css-animation/css-animation.component';
+import { NestedRouteDemoComponent } from './views/main/nested-route-demo/nested-route-demo.component';
+import { NestedComponent1Component } from './views/main/nested-component1/nested-component1.component';
+import { NestedComponent2Component } from './views/main/nested-component2/nested-component2.component';
+import { SimpleValidationComponent } from './views/main/simple-validation/simple-validation.component';
+import { CardComponent } from './components/card/card.component';
+import { NgContentDemoComponent } from './views/main/ng-content-demo/ng-content-demo.component';
+import { NineTenComponent } from './views/main/nine-ten/nine-ten.component';
+import { CurrencyDirective } from './directives/currency.directive';
 
 
 @NgModule({
@@ -61,6 +71,16 @@ import { DataTransferToComponent } from './views/main/data-transfer-to/data-tran
     NoPermissionComponent,
     DataTransferFromComponent,
     DataTransferToComponent,
+    NgAnimationComponent,
+    CssAnimationComponent,
+    NestedRouteDemoComponent,
+    NestedComponent1Component,
+    NestedComponent2Component,
+    SimpleValidationComponent,
+    CardComponent,
+    NgContentDemoComponent,
+    NineTenComponent,
+    CurrencyDirective,
   ],
   providers: [{
     provide: LocationStrategy,
