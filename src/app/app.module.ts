@@ -47,6 +47,7 @@ import { CardComponent } from './components/card/card.component';
 import { NgContentDemoComponent } from './views/main/ng-content-demo/ng-content-demo.component';
 import { NineTenComponent } from './views/main/nine-ten/nine-ten.component';
 import { CurrencyDirective } from './directives/currency.directive';
+import { UnitTestDemoComponent } from './views/main/unit-test-demo/unit-test-demo.component';
 
 
 @NgModule({
@@ -81,6 +82,7 @@ import { CurrencyDirective } from './directives/currency.directive';
     NgContentDemoComponent,
     NineTenComponent,
     CurrencyDirective,
+    UnitTestDemoComponent,
   ],
   providers: [{
     provide: LocationStrategy,

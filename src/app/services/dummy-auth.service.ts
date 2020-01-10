@@ -4,17 +4,21 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DummyAuthService {
-  isLoggedIn: boolean = false;
+  private _isLoggedIn: boolean = false;
 
   constructor() { }
 
   login() {
-    this.isLoggedIn = true;
+    this._isLoggedIn = true;
     alert('Dummy Sign in Successful');
   }
 
   logout() {
-    this.isLoggedIn = false;
+    this._isLoggedIn = false;
     alert('Dummy Sign out Successful');
+  }
+
+  public isLoggedIn() {
+    return this._isLoggedIn;
   }
 }

@@ -46,7 +46,7 @@ export class DefaultLayoutComponent {
   isLoggedIn = false;
 
   constructor(private auth: DummyAuthService) {
-    this.isLoggedIn = this.auth.isLoggedIn;
+    this.isLoggedIn = this.auth.isLoggedIn();
   }
 
   toggleMinimize(e) {
@@ -54,12 +54,12 @@ export class DefaultLayoutComponent {
   }
 
   loginLogoutButtonClicked() {
-    if(this.auth.isLoggedIn) {
+    if(this.auth.isLoggedIn()) {
       this.auth.logout();
     } else {
       this.auth.login();
     }
-    this.isLoggedIn = this.auth.isLoggedIn;
+    this.isLoggedIn = this.auth.isLoggedIn();
   }
 
   prepareRoute(outlet: RouterOutlet) {

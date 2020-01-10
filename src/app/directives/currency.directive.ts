@@ -1,4 +1,5 @@
 import { Directive, HostListener, Input, ElementRef } from '@angular/core';
+import { CurrencyPipe } from '@angular/common';
 
 @Directive({
   selector: '[appCurrency]'
@@ -49,7 +50,7 @@ export class CurrencyDirective {
     if (e.key === ' ' || isNaN(Number(e.key))) {
       e.preventDefault();
     }
-    this.prependCurrencySymbol();
+    this.formatCurrency();
   }
 
   @HostListener('keyup', ['$event'])
@@ -59,7 +60,7 @@ export class CurrencyDirective {
     } else {
       this.decimalCounter = this.el.nativeElement.value.split('.').length - 1;
     }
-    this.prependCurrencySymbol();
+    this.formatCurrency();
   }
 
   @HostListener('paste', ['$event'])
@@ -106,9 +107,10 @@ export class CurrencyDirective {
     return string.split('.').length <= 2;
   }
 
-  private prependCurrencySymbol() {
-    let valueWithoutCurrencySymbol = this.inputElement.value.replace(this.currencySymbol, '');
-    this.inputElement.value = this.currencySymbol + valueWithoutCurrencySymbol;
+  private formatCurrency() {
+    let valueWithoutFormatting = this.inputElement.value.replace(this.currencySymbol, '');
+    valueWithoutFormatting = valueWithoutFormatting.replace(/,/g, '');
+    this.inputElement.value = this.currencySymbol + (+valueWithoutFormatting).toLocaleString();
   }
 
 }

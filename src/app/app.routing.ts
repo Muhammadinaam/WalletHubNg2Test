@@ -17,6 +17,7 @@ import { NestedComponent2Component } from './views/main/nested-component2/nested
 import { SimpleValidationComponent } from './views/main/simple-validation/simple-validation.component';
 import { NgContentDemoComponent } from './views/main/ng-content-demo/ng-content-demo.component';
 import { NineTenComponent } from './views/main/nine-ten/nine-ten.component';
+import { UnitTestDemoComponent } from './views/main/unit-test-demo/unit-test-demo.component';
 
 export const routes: Routes = [
   {
@@ -128,6 +129,14 @@ export const routes: Routes = [
           title: 'Directive Demo and Property Binding Demo',
         },
         component: NineTenComponent
+      },
+
+      {
+        path: 'unit-test',
+        data: {
+          title: 'Unit Test',
+        },
+        component: UnitTestDemoComponent
       },
     ]
   },

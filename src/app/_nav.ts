@@ -69,5 +69,11 @@ export const navItems: INavData[] = [
     name: '9 and 10',
     url: '/nine-and-ten',
     icon: 'icon-notebook',
+  },
+
+  {
+    name: '11 Unit Test',
+    url: '/unit-test',
+    icon: 'icon-notebook',
   }
 ];

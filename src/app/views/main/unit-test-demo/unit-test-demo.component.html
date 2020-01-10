@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header">
+    <h5>Unit Tests Demo</h5>
+  </div>
+
+  <div class="card-body">
+    <div class="alert alert-danger">
+      Unit Tests of this Component has been written to show
+      <b>Unit Testing Skills</b>
+    </div>
+
+    Is User Logged In: <span class="badge badge-pill badge-primary">{{ auth.isLoggedIn() ? 'Yes' : 'No' }}</span>
+    <hr>
+
+    <p>Counter: <b class="counter">{{count}}</b></p>
+    <button class="btn btn-sm btn-primary btn-plus" (click)="plusBtnClicked()">+</button>
+    <button class="btn btn-sm btn-danger btn-minus" (click)="minusBtnClicked()">-</button>
+  </div>
+</div>
